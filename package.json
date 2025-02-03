@@ -4,13 +4,14 @@
   "description": "My project within the course TGWK12-Web Development Fundamentals, Jönköping University 2024",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "Node",
     "Express",
     "Handlebars",
-    "SQLite3."
+    "SQLite3"
   ],
   "author": "Simon-Dyke-Njenga",
   "license": "ISC",
