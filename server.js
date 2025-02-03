@@ -40,7 +40,7 @@ const app = express();
 //-----
 // PORT
 //-----
-const port = 3000;        
+      
 
 // SESSIONS
 //---------
@@ -351,9 +351,11 @@ app.get('/logout', (req, res) => {
 
 //listen
 
+const port = process.env.PORT || 3000; // Use Render's PORT variable
 app.listen(port, () => {
-    console.log(`Server is up and running on ${port}`);
+    console.log(`Server is up and running on port ${port}`);
 });
+
 
 //**************************setup database*****************************//
 
