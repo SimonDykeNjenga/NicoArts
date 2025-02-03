@@ -1,0 +1,47 @@
+<h1>Welcome to the Admin Dashboard</h1>
+
+<h2>Paintings</h2>
+<div class = "listContainer">
+    {{#each paintings}}
+    <div class = "item">
+        <p><strong>Title:</strong> {{title}}</p>
+        <p><strong>Artist:</strong> {{artist}}</p>
+        <p><strong>Price:</strong> ${{price}}</p>
+        <a href="/delete/paintings/{{id}}" onclick="return confirm('Are you sure you want to delete this painting?')">Delete</a>
+
+    </div>
+    {{/each}}
+</div>
+
+<h2>Add New Painting</h2>
+<form action="/add/paintings" method="POST">
+    <input type="text" name="title" placeholder="Painting Title" required />
+    <input type="text" name="artist" placeholder="Artist Name" required />
+    <input type="number" step="0.01" name="price" placeholder="Price" required />
+    <button type="submit">Add Painting</button>
+</form>
+
+
+<h2>Mouldings</h2>
+<div class = "listContainer">
+    {{#each mouldings}}
+    <div class = "item">
+
+        <p><strong>Name:</strong> {{name}}</p>
+        <p><strong>Material:</strong> {{material}}</p>
+        <p><strong>Price:</strong> ${{price}}</p>
+        <a href="/delete/mouldings/{{id}}" onclick="return confirm('Are you sure you want to delete this moulding?')">Delete</a>
+    </div>
+    {{/each}}
+</div>
+
+<h2>Add New Moulding</h2>
+<form action="/add/mouldings" method="POST">
+    <input type="text" name="name" placeholder="Moulding Name" required />
+    <input type="text" name="material" placeholder="Material" required />
+    <input type="number" step="0.01" name="price" placeholder="Price" required />
+    <button type="submit">Add Moulding</button>
+</form>
+
+
+

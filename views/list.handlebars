@@ -1,0 +1,23 @@
+<h1>Art Gallery</h1>
+<h2>Paintings</h2>
+<h3>Click on name/title to view details</h3>
+<div class = "listContainer">
+    {{#each paintings}}
+    <div class = "item">
+        <h3> <a href="/paintings/{{id}}">{{title}}</a></h3>
+        <p><strong>Artist:</strong> {{artist}}</p>
+        <p><strong>Price:</strong> ${{price}}</p>
+    </div>
+    {{/each}}
+</div>
+
+<h2>Mouldings</h2>
+<div class = "listContainer">
+    {{#each mouldings}}
+    <div class = "item">
+        <h3> <a href="/mouldings/{{id}}">{{name}}</a></h3>
+        <p><strong>Material:</strong> {{material}}</p>
+        <p><strong>Price:</strong> ${{price}}</p>
+    </div>
+    {{/each}}
+</div>
